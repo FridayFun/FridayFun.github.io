@@ -80,10 +80,12 @@ export class StartPage extends React.Component {
                                 {250 - this.state.memory.length} characters remaining
                             </div>
                         </div>
-                    </div>
-                    <button className='button' onClick={this.onSubmit}>Submit</button>
-                    <div className='submit'>
-                        <p>{ this.state.submit ? 'Thank you!' : ' '}</p>
+                        <div className='input-group__item'>
+                            <button className='button' onClick={this.onSubmit}>Submit</button>
+                            <div className='submit'>
+                                <p>{ this.state.submit ? 'Thank you!' : ' '}</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
