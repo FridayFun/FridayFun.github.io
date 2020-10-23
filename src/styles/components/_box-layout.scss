@@ -12,6 +12,9 @@
 .box-layout__box {
     background: fade-out(white, 0.15);
     border-radius: 5px;
+
+    border: 1px solid black;
+
     height: 50vh;
     min-height: 20rem;
     min-width: 20rem;

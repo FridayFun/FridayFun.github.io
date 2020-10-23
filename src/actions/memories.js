@@ -3,7 +3,6 @@ import database from '../firebase/firebase';
 // ADD_MEMORY
 export const addMemory = (memory) => ({
   type: 'ADD_MEMORIES',
-  name,
   memory
 });
 

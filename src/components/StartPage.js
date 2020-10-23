@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { startAddMemory } from '../actions/memories';
+import { startAddMemory, startSetMemories } from '../actions/memories';
 
 export class StartPage extends React.Component {
     constructor(props) {
@@ -33,6 +33,7 @@ export class StartPage extends React.Component {
                 memory: '',
                 submit: true
             }));
+            this.props.startSetMemories(); // overkill
         } else {
             // need to fix errors, maybe add alert? 
         }
@@ -65,6 +66,7 @@ export class StartPage extends React.Component {
 
                 <div className='box-layout__box'>
                     <h1 className='box-layout__title'>Share a Memory</h1>
+                    <h3 className='box-layout__title'>(Or two or three)</h3>
                     <div className='input-group'>
                         <div className='input-group__item'>
                             <textarea
@@ -90,7 +92,8 @@ export class StartPage extends React.Component {
 };
 
 const mapDispatchToProps = (dispatch) => ({
-    startAddMemory: (memory) => dispatch(startAddMemory(memory))
+    startAddMemory: (memory) => dispatch(startAddMemory(memory)),
+    startSetMemories: () => dispatch(startSetMemories())
 });
 
 const mapStateToProps = (state) => {
