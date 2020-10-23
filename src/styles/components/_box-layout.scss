@@ -1,0 +1,53 @@
+.box-layout {
+    align-items: center;
+    background: url('/Images/bg.jpeg');
+    background-size: cover;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    height: 100vh;
+    width: 100vw;
+}
+
+.box-layout__box {
+    background: fade-out(white, 0.15);
+    border-radius: 5px;
+    height: 50vh;
+    min-height: 20rem;
+    min-width: 20rem;
+    overflow-wrap: break-word;
+    padding: $l-size $m-size;
+    text-align: center;
+    width: 25vw;
+}
+
+.box-layout__box textarea {
+    height: 20vh;
+    min-width: 17rem;
+    resize: none;
+    width: 20vw;
+}
+
+.box-layout__happy {
+    font-size: $font-size-xlarge;
+    margin-top: 5rem;
+    max-height: 75%;
+    overflow: auto;
+    -webkit-animation: fade 10s linear infinite;
+    animation: fade 10s linear infinite;
+}
+
+.box-layout__title {
+    line-height: 1;
+    margin: 0 0 $m-size 0;
+}
+
+@-webkit-keyframes fade {
+    0%, 90%, 100% { opacity: 0; }
+    10%, 80% { opacity: 1; }
+}
+
+@keyframes fade {
+    0%, 90%, 100% { opacity: 0; }
+    10%, 80% { opacity: 1; }
+}
