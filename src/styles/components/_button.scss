@@ -7,7 +7,8 @@
     font-size: $font-size-xlarge;
     font-weight: 700;
     line-height: 1;
-    padding: $m-size $l-size;
+    margin: $s-size 0;
+    padding: $s-size $m-size;
     text-decoration: none;
 }
 
